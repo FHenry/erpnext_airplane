@@ -37,8 +37,14 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2023-09-14 15:45:08.990692",
+ "links": [
+  {
+   "group": "Flights",
+   "link_doctype": "Airplane Flight",
+   "link_fieldname": "airplane"
+  }
+ ],
+ "modified": "2023-09-15 18:40:58.895996",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane",

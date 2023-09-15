@@ -2,50 +2,28 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "prompt",
- "creation": "2023-09-14 15:40:52.338666",
+ "creation": "2023-09-14 18:14:56.537572",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "founding_year",
-  "customer_care_number",
-  "headquarters"
+  "description"
  ],
  "fields": [
   {
-   "fieldname": "founding_year",
-   "fieldtype": "Int",
-   "label": "Founding Year",
-   "non_negative": 1
-  },
-  {
-   "fieldname": "customer_care_number",
+   "description": "description about the add-on",
+   "fieldname": "description",
    "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Customer Care Number",
-   "reqd": 1
-  },
-  {
-   "fieldname": "headquarters",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Headquarters",
-   "reqd": 1
+   "label": "Description"
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [
-  {
-   "group": "Airplane",
-   "link_doctype": "Airplane",
-   "link_fieldname": "airline"
-  }
- ],
- "modified": "2023-09-15 18:38:44.230448",
+ "links": [],
+ "modified": "2023-09-14 18:14:56.537572",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
- "name": "Airline",
+ "name": "Airplane Ticket Add-on Type",
  "naming_rule": "Set by user",
  "owner": "Administrator",
  "permissions": [

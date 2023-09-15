@@ -5,6 +5,5 @@
 from frappe.model.document import Document
 
 
-class FlightPassenger(Document):
-	def validate(self):
-		self.full_name = self.first_name + " " + self.last_name
+class AirplaneFlight(Document):
+	pass

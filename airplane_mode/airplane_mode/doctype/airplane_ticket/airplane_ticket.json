@@ -9,20 +9,26 @@
  "engine": "InnoDB",
  "field_order": [
   "passenger",
+  "status",
   "column_break_n3p3o",
   "flight",
+  "seat",
   "section_break_2zg6s",
-  "source_airport",
   "source_airport_code",
   "column_break_any4u",
-  "destination_airport",
   "destination_airport_code",
+  "section_break_h7fgo",
+  "add_ons",
+  "section_break_ms9fs",
+  "flight_price",
+  "column_break_7oj50",
+  "total_amount",
   "departure_details_section",
   "departure_date",
   "departure_time",
   "column_break_w6ybl",
   "duration_of_flight",
-  "status"
+  "amended_from"
  ],
  "fields": [
   {
@@ -35,21 +41,7 @@
    "reqd": 1
   },
   {
-   "fieldname": "source_airport",
-   "fieldtype": "Link",
-   "label": "Source Airport",
-   "options": "Airport",
-   "reqd": 1
-  },
-  {
-   "fieldname": "destination_airport",
-   "fieldtype": "Link",
-   "label": "Destination Airport",
-   "options": "Airport",
-   "reqd": 1
-  },
-  {
-   "fetch_from": "source_airport.code",
+   "fetch_from": "flight.source_airport_code",
    "fieldname": "source_airport_code",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -59,7 +51,7 @@
    "reqd": 1
   },
   {
-   "fetch_from": "destination_airport.code",
+   "fetch_from": "flight.destination_airport_code",
    "fieldname": "destination_airport_code",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -72,27 +64,33 @@
    "fieldname": "flight",
    "fieldtype": "Link",
    "label": "Flight",
-   "options": "Airplane",
+   "options": "Airplane Flight",
    "reqd": 1
   },
   {
+   "fetch_from": "flight.date_of_departure",
    "fieldname": "departure_date",
    "fieldtype": "Date",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Departure Date",
+   "read_only": 1,
    "reqd": 1
   },
   {
+   "fetch_from": "flight.time_of_departure",
    "fieldname": "departure_time",
    "fieldtype": "Time",
    "label": "Departure Time",
+   "read_only": 1,
    "reqd": 1
   },
   {
+   "fetch_from": "flight.duration",
    "fieldname": "duration_of_flight",
    "fieldtype": "Duration",
    "label": "Duration of Flight",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -124,11 +122,57 @@
    "in_standard_filter": 1,
    "label": "Status",
    "options": "Booked\nChecked-In\nBoarded"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Airplane Ticket",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "add_ons",
+   "fieldtype": "Table",
+   "label": "add_ons",
+   "options": "Airplane Ticket Add-on Item"
+  },
+  {
+   "fieldname": "flight_price",
+   "fieldtype": "Currency",
+   "label": "Flight Price",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "seat",
+   "fieldtype": "Data",
+   "label": "Seat",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_h7fgo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_7oj50",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ms9fs",
+   "fieldtype": "Section Break"
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-09-14 17:32:52.500961",
+ "modified": "2023-09-15 18:57:20.888929",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",
