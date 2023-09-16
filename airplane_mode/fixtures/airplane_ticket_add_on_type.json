@@ -1,0 +1,16 @@
+[
+ {
+  "description": "The meal",
+  "docstatus": 0,
+  "doctype": "Airplane Ticket Add-on Type",
+  "modified": "2023-09-14 18:18:13.569179",
+  "name": "Meal"
+ },
+ {
+  "description": "More than 1 bagage",
+  "docstatus": 0,
+  "doctype": "Airplane Ticket Add-on Type",
+  "modified": "2023-09-14 18:18:34.498086",
+  "name": "Extra bagage"
+ }
+]

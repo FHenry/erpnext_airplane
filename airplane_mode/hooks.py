@@ -1,4 +1,4 @@
-from . import __version__ as app_version
+# from . import __version__ as app_version
 
 app_name = "airplane_mode"
 app_title = "Airplane Mode"
@@ -42,7 +42,7 @@ app_license = "GPL(V3)"
 
 # website user home page (by Role)
 # role_home_page = {
-#	"Role": "home_page"
+# 	"Role": "home_page"
 # }
 
 # Generators
@@ -56,8 +56,8 @@ app_license = "GPL(V3)"
 
 # add methods and filters to jinja environment
 # jinja = {
-#	"methods": "airplane_mode.utils.jinja_methods",
-#	"filters": "airplane_mode.utils.jinja_filters"
+# 	"methods": "airplane_mode.utils.jinja_methods",
+# 	"filters": "airplane_mode.utils.jinja_filters"
 # }
 
 # Installation
@@ -99,11 +99,11 @@ app_license = "GPL(V3)"
 # Permissions evaluated in scripted ways
 
 # permission_query_conditions = {
-#	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
+# 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
 # }
 #
 # has_permission = {
-#	"Event": "frappe.desk.doctype.event.event.has_permission",
+# 	"Event": "frappe.desk.doctype.event.event.has_permission",
 # }
 
 # DocType Class
@@ -111,7 +111,7 @@ app_license = "GPL(V3)"
 # Override standard doctype classes
 
 # override_doctype_class = {
-#	"ToDo": "custom_app.overrides.CustomToDo"
+# 	"ToDo": "custom_app.overrides.CustomToDo"
 # }
 
 # Document Events
@@ -119,32 +119,32 @@ app_license = "GPL(V3)"
 # Hook on document methods and events
 
 # doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
+# 	"*": {
+# 		"on_update": "method",
+# 		"on_cancel": "method",
+# 		"on_trash": "method"
+# 	}
 # }
 
 # Scheduled Tasks
 # ---------------
 
 # scheduler_events = {
-#	"all": [
-#		"airplane_mode.tasks.all"
-#	],
-#	"daily": [
-#		"airplane_mode.tasks.daily"
-#	],
-#	"hourly": [
-#		"airplane_mode.tasks.hourly"
-#	],
-#	"weekly": [
-#		"airplane_mode.tasks.weekly"
-#	],
-#	"monthly": [
-#		"airplane_mode.tasks.monthly"
-#	],
+# 	"all": [
+# 		"airplane_mode.tasks.all"
+# 	],
+# 	"daily": [
+# 		"airplane_mode.tasks.daily"
+# 	],
+# 	"hourly": [
+# 		"airplane_mode.tasks.hourly"
+# 	],
+# 	"weekly": [
+# 		"airplane_mode.tasks.weekly"
+# 	],
+# 	"monthly": [
+# 		"airplane_mode.tasks.monthly"
+# 	],
 # }
 
 # Testing
@@ -156,14 +156,14 @@ app_license = "GPL(V3)"
 # ------------------------------
 #
 # override_whitelisted_methods = {
-#	"frappe.desk.doctype.event.event.get_events": "airplane_mode.event.get_events"
+# 	"frappe.desk.doctype.event.event.get_events": "airplane_mode.event.get_events"
 # }
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
 # override_doctype_dashboards = {
-#	"Task": "airplane_mode.task.get_dashboard_data"
+# 	"Task": "airplane_mode.task.get_dashboard_data"
 # }
 
 # exempt linked doctypes from being automatically cancelled
@@ -189,29 +189,35 @@ app_license = "GPL(V3)"
 # --------------------
 
 # user_data_fields = [
-#	{
-#		"doctype": "{doctype_1}",
-#		"filter_by": "{filter_by}",
-#		"redact_fields": ["{field_1}", "{field_2}"],
-#		"partial": 1,
-#	},
-#	{
-#		"doctype": "{doctype_2}",
-#		"filter_by": "{filter_by}",
-#		"partial": 1,
-#	},
-#	{
-#		"doctype": "{doctype_3}",
-#		"strict": False,
-#	},
-#	{
-#		"doctype": "{doctype_4}"
-#	}
+# 	{
+# 		"doctype": "{doctype_1}",
+# 		"filter_by": "{filter_by}",
+# 		"redact_fields": ["{field_1}", "{field_2}"],
+# 		"partial": 1,
+# 	},
+# 	{
+# 		"doctype": "{doctype_2}",
+# 		"filter_by": "{filter_by}",
+# 		"partial": 1,
+# 	},
+# 	{
+# 		"doctype": "{doctype_3}",
+# 		"strict": False,
+# 	},
+# 	{
+# 		"doctype": "{doctype_4}"
+# 	}
 # ]
 
 # Authentication and authorization
 # --------------------------------
 
 # auth_hooks = [
-#	"airplane_mode.auth.validate"
+# 	"airplane_mode.auth.validate"
 # ]
+
+fixtures = [
+	{
+		"dt": "Airplane Ticket Add-on Type",
+	}
+]
