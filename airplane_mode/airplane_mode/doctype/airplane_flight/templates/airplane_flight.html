@@ -1,0 +1,21 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<h1>{{ title }}</h1>
+
+<h2>
+{{ _('Flight Details') }}
+</h2>
+<ul class="text-muted small">
+	<li>{{ _('Airline') }}: {{ frappe.get_doc('Airline', airplane.airline).name }}</li>
+	<li>{{ source_airport_code }} -> {{ destination_airport_code }}</li>
+	<li>{{ frappe.utils.format_date(date_of_departure, "d MMMM, YYYY") }} |
+				{{ time_of_departure }}</li>
+	<li>{{ _('Duration') }}: {{ frappe.utils.format_duration(duration) }}</li>
+</ul>
+
+
+
+{% endblock %}
+
+<!-- this is a sample default web page template -->

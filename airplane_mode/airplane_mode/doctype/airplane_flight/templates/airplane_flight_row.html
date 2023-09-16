@@ -1,0 +1,29 @@
+{% if publish_on_website and docstatus==1 %}
+<div class="blog-card">
+	<div class="card">
+		<div class="card-body">
+			<div>
+				<strong>
+					{{ frappe.get_doc('Airline', airplane.airline).name }}
+				</strong>
+			</div>
+
+			<div class="text-muted small">
+				<span>
+					{{ source_airport_code }} -> {{ destination_airport_code }}
+				</span>
+			</div>
+
+			<div class="mt-3">
+				{{ frappe.utils.format_date(date_of_departure, "d MMMM, YYYY") }} |
+				{{ time_of_departure }} |
+				{{ frappe.utils.format_duration(duration) }}
+			</div>
+
+			<div class="mt-3">
+				<a href="{{ route }}">{{ _('View Flight') }}</a>
+			</div>
+		</div>
+	</div>
+</div>
+{% endif %}
