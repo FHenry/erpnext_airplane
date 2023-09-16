@@ -26,7 +26,7 @@ class AirplaneTicket(Document):
 			else:
 				addon.delete()
 
-		self.total_amount += self.flight_price
+		self.total_amount += int(self.flight_price)
 
 		self.update({"add_ons": to_keep_addon})
 

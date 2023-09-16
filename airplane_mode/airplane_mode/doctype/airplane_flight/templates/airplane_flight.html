@@ -14,7 +14,9 @@
 	<li>{{ _('Duration') }}: {{ frappe.utils.format_duration(duration) }}</li>
 </ul>
 
-<button class="btn btn-primary">{{ _('Book Flight') }}</button>
+<a href="/book-flight-ticket-web-form/new?flight={{ name }}&flight_price={{ doc.get_rendom_price() }}">
+	<button class="btn btn-primary">{{ _('Book Flight') }}</button>
+</a>
 
 
 {% endblock %}
