@@ -9,6 +9,5 @@ frappe.ui.form.on('Airline', {
       let div = $('<div>').addClass('pb-3').append(a);
       elmt.prepend(div);
     }
-
 	}
 });

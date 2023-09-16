@@ -38,7 +38,8 @@
   {
    "fieldname": "website",
    "fieldtype": "Data",
-   "label": "Website"
+   "label": "Website",
+   "options": "URL"
   },
   {
    "fieldname": "column_break_p9vot",
@@ -53,7 +54,7 @@
    "link_fieldname": "airline"
   }
  ],
- "modified": "2023-09-16 15:53:22.155443",
+ "modified": "2023-09-16 16:49:32.309336",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airline",
