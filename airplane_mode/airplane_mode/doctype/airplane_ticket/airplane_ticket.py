@@ -11,7 +11,19 @@ from frappe.model.document import Document
 class AirplaneTicket(Document):
 	def before_insert(self):
 		# <random-integer><random-capital-alphabet-from-A-to-E>
-		self.seat = str(randint(1, 99)) + choice(["A", "B", "C", "D", "E", "F"])
+		# self.seat = str(randint(1, 99)) + choice(["A", "B", "C", "D", "E", "F"])
+
+		seats_booked = []
+		# find other ticket from the same plane
+		for ticket in frappe.get_all(self.doctype, filters={"flight": self.flight}):
+			if ticket.seat:
+				seats_booked.append(ticket.seat)
+
+		find_available_seat = False
+		while find_available_seat is False:
+			self.seat = str(randint(1, 99)) + choice(["A", "B", "C", "D", "E", "F"])
+			if self.seat not in seats_booked:
+				find_available_seat = True
 
 	def validate(self):
 		self.total_amount = 0
