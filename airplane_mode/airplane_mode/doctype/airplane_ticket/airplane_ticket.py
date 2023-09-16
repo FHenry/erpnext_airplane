@@ -20,10 +20,17 @@ class AirplaneTicket(Document):
 				seats_booked.append(ticket.seat)
 
 		find_available_seat = False
+		plane_place = 50
+		try_find_place = 1
 		while find_available_seat is False:
 			self.seat = str(randint(1, 99)) + choice(["A", "B", "C", "D", "E", "F"])
 			if self.seat not in seats_booked:
 				find_available_seat = True
+
+			try_find_place += 1
+
+			if try_find_place >= plane_place:
+				frappe.throw("No More seat available on this flight")
 
 	def validate(self):
 		self.total_amount = 0
