@@ -7,4 +7,6 @@ from frappe.model.document import Document
 
 class FlightPassenger(Document):
 	def validate(self):
-		self.full_name = self.first_name + " " + self.last_name
+		self.full_name = str(self.first_name)
+		if self.last_name:
+			self.full_name = " " + str(self.last_name)

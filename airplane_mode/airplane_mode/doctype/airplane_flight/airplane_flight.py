@@ -9,7 +9,7 @@ from frappe.website.website_generator import WebsiteGenerator
 
 class AirplaneFlight(WebsiteGenerator):
 	def on_submit(self):
-		self.status = "Complete"
+		self.status = "Completed"
 		for ticket in frappe.get_all(
 			"Airplane Ticket", filters={"flight": self.name, "status": ["!=", "Boarded"]}
 		):
