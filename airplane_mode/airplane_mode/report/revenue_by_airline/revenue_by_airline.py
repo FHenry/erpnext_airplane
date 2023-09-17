@@ -11,12 +11,6 @@ def execute(filters=None):
 	data = get_data()
 	chart_data = prepare_chart_data(data)
 
-	# if not data:
-	# 	return [], [], None, []
-	#
-	# data, chart_data = prepare_data(data)
-	#
-	# return columns, data, None, chart_data
 	return columns, data, None, chart_data
 
 
