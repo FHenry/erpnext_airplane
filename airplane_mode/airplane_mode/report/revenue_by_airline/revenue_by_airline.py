@@ -10,8 +10,9 @@ def execute(filters=None):
 	columns = get_columns()
 	data = get_data()
 	chart_data = prepare_chart_data(data)
+	report_summary = get_report_sumary(data)
 
-	return columns, data, None, chart_data
+	return columns, data, None, chart_data, report_summary
 
 
 def get_columns():
@@ -72,3 +73,19 @@ def prepare_chart_data(data):
 		"type": "donut",
 		"height": 300,
 	}
+
+
+def get_report_sumary(data):
+	total_income = 0
+	for row in data:
+		total_income += row.total_income
+
+	return [
+		{
+			"value": total_income,
+			"label": _("Total Revenue"),
+			"indicator": "Green" if total_income > 0 else "Red",
+			"datatype": "Currency",
+			"currency": "EUR",
+		},
+	]
