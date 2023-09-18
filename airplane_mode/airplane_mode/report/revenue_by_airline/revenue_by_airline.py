@@ -78,7 +78,7 @@ def prepare_chart_data(data):
 def get_report_sumary(data):
 	total_income = 0
 	for row in data:
-		total_income += row.total_income
+		total_income += float(row.total_income)
 
 	return [
 		{
