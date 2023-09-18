@@ -230,14 +230,4 @@ fixtures = [
 			]
 		],
 	},
-	{
-		"dt": "Custom DocPerm",
-		"filters": [
-			[
-				"role",
-				"in",
-				("Airport Authority Personnel", "Fleet Manager", "Travel Agent", "Flight Crew Member"),
-			]
-		],
-	},
 ]
