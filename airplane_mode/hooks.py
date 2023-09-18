@@ -219,5 +219,25 @@ app_license = "GPL(V3)"
 fixtures = [
 	{
 		"dt": "Airplane Ticket Add-on Type",
-	}
+	},
+	{
+		"dt": "Role",
+		"filters": [
+			[
+				"name",
+				"in",
+				("Airport Authority Personnel", "Fleet Manager", "Travel Agent", "Flight Crew Member"),
+			]
+		],
+	},
+	{
+		"dt": "Custom DocPerm",
+		"filters": [
+			[
+				"role",
+				"in",
+				("Airport Authority Personnel", "Fleet Manager", "Travel Agent", "Flight Crew Member"),
+			]
+		],
+	},
 ]
