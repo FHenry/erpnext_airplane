@@ -1,0 +1,42 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2023-12-15 09:52:42.912407",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "custom_request",
+  "estiamated_wished_price"
+ ],
+ "fields": [
+  {
+   "fieldname": "custom_request",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Custom Request",
+   "options": "Better laucnh\nChange place",
+   "reqd": 1
+  },
+  {
+   "fieldname": "estiamated_wished_price",
+   "fieldtype": "Currency",
+   "label": "Estiamated Wished Price"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-12-15 10:26:14.758363",
+ "modified_by": "Administrator",
+ "module": "Airplane Mode",
+ "name": "AddOn Detail",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
